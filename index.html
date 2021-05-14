@@ -1,7 +1,10 @@
 ﻿﻿<!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -9,20 +12,24 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#262626">
     <meta name="msapplication-TileColor" content="#666666">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#666666">
+
     <title>HTML редактор</title>
+
     <script src="jquery-3.4.1.min.js"></script>
     <script src="data/ckeditor.js"></script>
     <script src="jquery-adapter.js"></script>
 </head>
+
 <body style="background-color: #262626;">
     <form>
         <textarea name="editor" id="editor" rows="10" cols="80"></textarea>
     </form>
     <script type="text/javascript">
-        $('#editor').ckeditor(function() {
+        $('#editor').ckeditor(function () {
             $('.cke_button__maximize').trigger('click');
         });
     </script>
 </body>
+
 </html>

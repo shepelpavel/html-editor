@@ -1,0 +1,39 @@
+{
+  "name": "electron-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electron .",
+    "build-linux": "electron-builder --linux",
+    "build-win": "electron-builder --win"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shepelpavel/electron-sandbox.git"
+  },
+  "author": "shepel",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/shepelpavel/electron-sandbox/issues"
+  },
+  "homepage": "https://github.com/shepelpavel/electron-sandbox#readme",
+  "devDependencies": {
+    "electron": "^12.0.7",
+    "electron-builder": "^22.10.5"
+  },
+  "build": {
+    "productName": "electron-sandbox",
+    "appId": "electronsandbox",
+    "win": {
+      "target": [
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  }
+}
