@@ -1,5 +1,5 @@
 {
-  "name": "electron-sandbox",
+  "name": "html-editor",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,23 +8,15 @@
     "build-linux": "electron-builder --linux",
     "build-win": "electron-builder --win"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shepelpavel/electron-sandbox.git"
-  },
   "author": "shepel",
   "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/shepelpavel/electron-sandbox/issues"
-  },
-  "homepage": "https://github.com/shepelpavel/electron-sandbox#readme",
   "devDependencies": {
     "electron": "^12.0.7",
     "electron-builder": "^22.10.5"
   },
   "build": {
-    "productName": "electron-sandbox",
-    "appId": "electronsandbox",
+    "productName": "html-editor",
+    "appId": "htmleditor",
     "win": {
       "target": [
         "portable"
