@@ -1,6 +1,6 @@
 {
   "name": "html-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,18 +11,23 @@
   "author": "shepel",
   "license": "UNLICENSED",
   "devDependencies": {
-    "electron": "^12.0.7",
-    "electron-builder": "^22.10.5"
+    "electron": "^13.2.2",
+    "electron-builder": "^22.11.7"
   },
   "build": {
-    "productName": "html-editor",
+    "productName": "HTML-Editor",
     "appId": "htmleditor",
     "win": {
+      "icon": "./android-chrome-512x512.png",
       "target": [
         "portable"
       ]
     },
     "linux": {
+      "synopsis": "HTML-Editor",
+      "description": "HTML-Editor CKEditor 4",
+      "category": "Office",
+      "icon": "./android-chrome-512x512.png",
       "target": [
         "AppImage"
       ]

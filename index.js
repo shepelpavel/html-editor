@@ -1,36 +1,33 @@
-const {
-    app,
-    BrowserWindow
-} = require('electron')
-const path = require('path')
+const { app, BrowserWindow } = require("electron");
+const path = require("path");
 
 function createWindow() {
-    const win = new BrowserWindow({
-        width: 1200,
-        height: 600,
-        autoHideMenuBar: true,
-        icon: __dirname + '/android-chrome-512x512.png',
-        webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
-        }
-    })
+  const win = new BrowserWindow({
+    width: 1200,
+    height: 600,
+    autoHideMenuBar: true,
+    icon: __dirname + "/android-chrome-512x512.png",
+    webPreferences: {
+      preload: path.join(__dirname, "preload.js"),
+    },
+  });
 
-    win.loadFile('index.html')
-    // win.webContents.openDevTools()
+  win.loadFile("index.html");
+  //   win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {
-    createWindow()
+  createWindow();
 
-    app.on('activate', () => {
-        if (BrowserWindow.getAllWindows().length === 0) {
-            createWindow()
-        }
-    })
-})
-
-app.on('window-all-closed', () => {
-    if (process.platform !== 'darwin') {
-        app.quit()
+  app.on("activate", () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createWindow();
     }
-})
+  });
+});
+
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
+    app.quit();
+  }
+});
